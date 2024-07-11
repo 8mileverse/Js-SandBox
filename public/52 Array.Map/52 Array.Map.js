@@ -48,3 +48,58 @@
 
    const result = techIT.map((names) => names.name);
    console.log(result);
+
+
+//    Create a new company with name and Ceo
+
+
+const techStartUp = techIT.map((techInfo) =>{
+
+    return {
+        name: techInfo.name,
+        CEO:  techInfo.CEO,
+        Founded: techInfo.Founded,
+        Dissolved: techInfo.end,
+        lifeSpan: techInfo.end - techInfo.Founded + ' years' // Now the lifespan of years has been added to the comapny
+     }
+    // {
+    //     name: 'Facebook',
+    //     category: 'Social Media'
+    // },
+    // {
+    //     name: 'Apple',
+    //     category: 'Tech Company'
+    // }
+
+});
+
+console.table(techStartUp);
+
+
+// Create an Array of kength of years in Comapany Life Span
+
+const lifeSpan = techIT.map((techInfo) => techInfo.end - techInfo.Founded);
+
+console.table(lifeSpan);
+
+
+// chain Map Method : using two or more Maps at the same time;
+numbers = [4,3,5,6,7,8,9,10,11,12];
+const sqauareAndDoubled = numbers
+.map((number) =>Math.sqrt(number))
+.map((number) => number * 2)
+.map((number) => number**3)
+
+
+;
+
+console.table(sqauareAndDoubled);
+
+
+// Chaining Multiple Methods 
+
+const evenDoubled = numbers
+.filter((number) => number % 2 === 0)
+.map((number) => number * 2)
+
+console.table(evenDoubled);
