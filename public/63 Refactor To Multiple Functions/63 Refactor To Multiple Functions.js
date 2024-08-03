@@ -1,17 +1,17 @@
 // quick and dirty
-function createListItem(item) {
+// function createListItem(item) {
    
-    const list = document.createElement('li');
+//     const list = document.createElement('li');
   
   
   
-    list.innerHTML = ` ${item}  <button class="remove-item btn-link text-red">
-              <i class="fa-solid fa-xmark"></i>
-            </button> `
+//     list.innerHTML = ` ${item}  <button class="remove-item btn-link text-red">
+//               <i class="fa-solid fa-xmark"></i>
+//             </button> `
     
-     document.querySelector('.items').appendChild(list);
-}
-createListItem('Poundo Yam');
+//      document.querySelector('.items').appendChild(list);
+// }
+// createListItem('Poundo Yam');
 
 
 // Clean and Performant
@@ -23,6 +23,8 @@ function createNewItem(item){
     // creating our list item
     const listItem = document.createElement('li');
     //// listItem.textContent = `${item}`;   //this is irrelevant
+
+    // create the text inside to be wriitted, note we haven't set the text to any thing now 
     
     listItem.appendChild(document.createTextNode(item));
     // creating our button
