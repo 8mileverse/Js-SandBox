@@ -1,0 +1,134 @@
+-- Events In Javascript--
+In JavaScript, events are actions or occurrences that happen in the browser, which the JavaScript code can respond to. Events can be triggered by user interactions (like clicking a button or typing in a text field), browser actions (like page load or resize), or other factors (like a network response or a timeout). 
+
+### Common Event Types in JavaScript
+
+Here are the most common types of events in JavaScript, categorized by their purpose:
+
+#### 1. **Mouse Events:**
+Mouse events are triggered by user actions using a mouse or similar pointing device.
+
+- **`click`**: Fired when a user clicks on an element.
+- **`dblclick`**: Fired when a user double-clicks on an element.
+- **`mousedown`**: Fired when a user presses a mouse button down on an element.
+- **`mouseup`**: Fired when a user releases a mouse button over an element.
+- **`mousemove`**: Fired when the mouse pointer is moved over an element.
+- **`mouseenter`**: Fired when the mouse pointer moves into an element.
+- **`mouseleave`**: Fired when the mouse pointer leaves an element.
+- **`mouseover`**: Fired when the mouse pointer is moved onto an element or one of its child elements.
+- **`mouseout`**: Fired when the mouse pointer moves out of an element or one of its child elements.
+
+#### 2. **Keyboard Events:**
+Keyboard events are triggered by user actions involving the keyboard.
+
+- **`keydown`**: Fired when a key is pressed down.
+- **`keypress`**: Fired when a key is pressed down and the character is produced (deprecated in modern browsers).
+- **`keyup`**: Fired when a key is released.
+
+#### 3. **Form Events:**
+Form events are triggered by user actions involving HTML forms and their elements.
+
+- **`submit`**: Fired when a form is submitted.
+- **`reset`**: Fired when a form is reset.
+- **`focus`**: Fired when an element (like an input field) gains focus.
+- **`blur`**: Fired when an element loses focus.
+- **`change`**: Fired when the value of an element (like `<input>`, `<textarea>`, `<select>`) is changed.
+- **`input`**: Fired when the value of an `<input>` or `<textarea>` changes.
+
+#### 4. **Window Events:**
+Window events are triggered by user actions or browser actions affecting the window or document.
+
+- **`load`**: Fired when the entire page (including all dependent resources like images, scripts, etc.) has finished loading.
+- **`DOMContentLoaded`**: Fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+- **`resize`**: Fired when the window is resized.
+- **`scroll`**: Fired when the user scrolls the document or an element.
+- **`unload`**: Fired when the document or a child resource is being unloaded.
+
+#### 5. **Clipboard Events:**
+Clipboard events are triggered by user actions involving the system clipboard.
+
+- **`copy`**: Fired when the user copies content to the clipboard.
+- **`cut`**: Fired when the user cuts content to the clipboard.
+- **`paste`**: Fired when the user pastes content from the clipboard.
+
+#### 6. **Touch Events:**
+Touch events are triggered by user interactions with a touchscreen device.
+
+- **`touchstart`**: Fired when a touch point is placed on the touch surface.
+- **`touchend`**: Fired when a touch point is removed from the touch surface.
+- **`touchmove`**: Fired when a touch point is moved along the touch surface.
+- **`touchcancel`**: Fired when a touch point is interrupted or canceled, such as by an incoming call or the device switching to another app.
+
+#### 7. **Drag and Drop Events:**
+Drag and drop events are triggered during drag-and-drop operations.
+
+- **`dragstart`**: Fired when the user starts dragging an element.
+- **`drag`**: Fired continuously as the user drags an element.
+- **`dragenter`**: Fired when a dragged item enters a valid drop target.
+- **`dragover`**: Fired when a dragged item is over a valid drop target.
+- **`dragleave`**: Fired when a dragged item leaves a valid drop target.
+- **`drop`**: Fired when the dragged item is dropped on a valid drop target.
+- **`dragend`**: Fired when the user stops dragging an element.
+
+#### 8. **Media Events:**
+Media events are triggered by actions related to media elements like audio or video.
+
+- **`play`**: Fired when the media begins to play.
+- **`pause`**: Fired when the media is paused.
+- **`ended`**: Fired when the media has reached the end.
+- **`volumechange`**: Fired when the volume of the media is changed.
+- **`timeupdate`**: Fired when the playing position of the media changes.
+
+#### 9. **Network Events:**
+Network events are triggered by changes in network status or communication.
+
+- **`online`**: Fired when the browser regains network connectivity.
+- **`offline`**: Fired when the browser loses network connectivity.
+
+#### 10. **Custom Events:**
+Custom events are user-defined events that can be created and dispatched using the `CustomEvent` constructor.
+
+- Example: `new CustomEvent('myCustomEvent', { detail: { message: 'Hello World' } })` allows you to create an event named `myCustomEvent` and attach additional data to it.
+
+### How to Use Events in JavaScript:
+
+Events are handled by using event listeners. Here’s an example of how to use an event listener for a `click` event:
+
+```html
+<button id="myButton">Click Me!</button>
+
+<script>
+  const button = document.getElementById('myButton');
+
+  // Adding an event listener for the 'click' event
+  button.addEventListener('click', function() {
+    alert('Button was clicked!');
+  });
+</script>
+```
+
+In this example, when the button is clicked, the `click` event is triggered, and the function inside `addEventListener` is executed, showing an alert.
+
+### Summary:
+
+Events in JavaScript are a powerful way to interact with users, handle input, and create dynamic web applications. Understanding different types of events and how to use them effectively can greatly enhance the user experience and functionality of your web applications.
+
+
+** Extreme Note when firing of an event in JavaScript
+
+
+
+
+function toggle(e){
+
+  //code
+};
+
+
+document.querySelector('button').addEventListener('click', toggle); // click event is known as the action while the toggle can be called either handler or callback 
+
+
+
+
+
+**
