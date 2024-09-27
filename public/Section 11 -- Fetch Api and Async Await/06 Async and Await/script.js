@@ -22,11 +22,14 @@ async function getUser() {
 
 getUser();
 
-const getPosts = async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const res = await response.json();
+// const getPosts = async () => {
+//   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+//   const res = await response.json();
 
-  console.log(res);
-};
+//   console.log(res);
+// };
 
-getPosts();
+// getPosts();
+
+
+
