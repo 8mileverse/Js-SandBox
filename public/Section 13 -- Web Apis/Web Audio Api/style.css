@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Add your background image here */
+   
+    margin: 0;
+    padding: 20px;
+    color: white; /* Change text color for better contrast */
+}
+
+h2, h4 {
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add a shadow for better visibility */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: url('madara.jpg'); /* Semi-transparent white for container */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out; /* Animation on load */
+}
+
+.button-container {
+    text-align: center;
+    margin: 15px 0;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Add transform for animation */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+#volume {
+    width: 100%;
+    margin-top: 15px;
+}
+
+#current-time {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px 12px; /* Adjust button padding for smaller screens */
+        font-size: 14px; /* Smaller font size */
+    }
+}
