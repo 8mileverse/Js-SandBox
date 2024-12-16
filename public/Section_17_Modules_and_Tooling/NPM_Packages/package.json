@@ -1,0 +1,18 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "test node app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "author": "Adeluola David",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}
