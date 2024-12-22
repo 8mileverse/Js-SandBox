@@ -1,0 +1,20 @@
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css ***!
+  \*********************************************************************/
+body {
+    /* background: #1A1A1D; */
+    background-color: #18181b;
+    /* Dark background color */
+    background-image:
+        url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAwAB/0bUV0QAAAABJRU5ErkJggg==);
+    /* Base64 encoded 1px noise texture */
+    background-repeat: repeat;
+    color: white;
+    /* Text color for contrast */
+    min-height: 100vh;
+
+    color: whitesmoke;
+}
+
+
+
