@@ -83,7 +83,43 @@ class LinkdedLists {
   }
   //   Get at Index
 
+  getAt(index) {
+    let current = this._head;
+    let count = 0;
+
+    while (current) {
+      if (count === index) {
+        console.log(current._value);
+      }
+
+      count++;
+      current = current.next;
+      return null;
+    }
+  }
+
   //   Remove at Index
+  removeAt(index) {
+    if (index > this._length) {
+      return;
+    }
+    let current = this._head;
+    let previous;
+    let count = 0;
+
+    if (index === 0) {
+      this._head = current.next;
+      return;
+    } else {
+      while (count < index) {
+        count++;
+        previous = current;
+        current = current.next;
+      }
+      previous.next = current.next;
+    }
+    this._length--;
+  }
 
   //   Print List Data
   printListData() {
@@ -99,6 +135,10 @@ class LinkdedLists {
   }
 
   //   Clear List Data
+  clearListData() {
+    this._head = null;
+    this._length = 0;
+  }
 }
 
 const list = new LinkdedLists();
@@ -108,8 +148,13 @@ list.insertFirst(200); // this points to the first  node
 list.insertFirst(300);
 list.insertLast(50);
 list.insertLast(10);
-list.insertAt(1,2)
+list.insertAt(1, 2);
+list.getAt(0);
 
 console.log(list);
 
 list.printListData();
+
+
+
+
